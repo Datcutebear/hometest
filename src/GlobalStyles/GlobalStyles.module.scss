@@ -1,0 +1,29 @@
+@import 'normalize.css';
+
+:root {
+    --woocommerce: #a46497;
+    --wc-green: #7ad03a;
+    --wc-red: #a00;
+    --wc-orange: #ffba00;
+    --wc-blue: #2ea2cc;
+    --wc-primary: #a46497;
+    --wc-primary-text: white;
+    --wc-secondary: #ebe9eb;
+    --wc-secondary-text: #515151;
+    --wc-highlight: #77a464;
+    --wc-highligh-text: white;
+    --wc-content-bg: #fff;
+    --wc-subtext: #767676;
+}
+
+body{
+    background: #fff;
+    font-family: 'Roboto','Helvetica Neue',Arial,Verdana,sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #444;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.7;
+}

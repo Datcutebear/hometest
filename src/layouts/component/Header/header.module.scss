@@ -1,0 +1,80 @@
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    background: rgb(256,256,256,.95);
+    background: rgba(256,256,256,.95);
+    border-bottom: 1px solid #dce0e0;
+    float: left;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    border-color: #dce0e0;
+    background-color: #ffffff;
+}
+
+
+.standard-wrapper{
+    position: relative;
+    max-width: 1425px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 90px;
+    height: 74px;
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-image{    
+    height: 74px;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shopping-icon{
+    margin-right: 12px;
+    font-size: 13px;
+}
+
+.shopping-cart{
+    position: relative;
+}
+
+.shopping-count{
+    position: absolute;
+    top: -6px;
+    right: 0px;
+    border-radius: 50px;
+    background: #ff4a52;
+    color: #fff;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 11px;
+}
+
+.mobile-icon{
+    padding-right: 13px;
+    font-size: 13px;
+}
