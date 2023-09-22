@@ -1,0 +1,15 @@
+.wrapper{
+    position: relative;
+    z-index: -999;
+}
+
+.background-image{
+    width: 100%;
+    height: 800px;
+}
+
+@media (max-width: 765px) {
+    .background-image{
+        height: 500px;
+    }
+}

@@ -1,0 +1,293 @@
+.footer{
+    position: absolute;
+    top: 3630px;
+    z-index: 1000;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    height: 414px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-1{
+    width: 390px;
+    height: 288px;
+    margin-right: 28px;
+}
+
+.title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 7.5px 0;
+    color: #cccccc;
+    font-size: 15px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.element-icon{
+    margin-right: 8px;
+}
+
+.content{
+    padding: 7.5px 0;
+    font-size: 17px;
+    color: #cccccc;
+}
+
+.image{
+    margin-top: 30px;
+    width: 246px;
+    height: 113px;
+}
+
+.text-2{
+    margin-right: 37.5px;
+    width: 390px;
+}
+
+.element{
+
+}
+
+.social{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    margin: 0 5px 10px 10px!important;
+    cursor: pointer;
+}
+
+.f{
+    background-color: #2d5f9a;
+}
+
+.face, .twitter, .youtube, .printerest, .instagram {
+    color: #fff;
+}
+
+.t{
+    background-color: #00c3f3;
+}
+
+.y{
+    background-color: #cc181e;
+}
+
+.p{
+    background-color: #bd081c;
+}
+
+.i{
+    background-color: #405de6;
+}
+
+.recent-trip{
+
+}
+
+.size-img{
+    width: 125.75px;
+    height: 125.75px;
+    border-radius: 5px;
+}
+
+.trip-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: 271px;
+    cursor: pointer;
+}
+  
+.trip-img-3 {
+    flex: 1 1 33.33%;
+    padding: 0 5px 0 0;
+    box-sizing: border-box;
+}
+  
+  
+.trip-img-top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 131px;
+}
+  
+.trip-img-bottom {
+    width: 100%;
+    height: 131px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-title{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 90px 20px 90px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.footer-title-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-title-content{
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    color: #cccccc;
+}
+
+.menu-element{
+    font-size: 13px;
+    font-weight: 400;
+    text-align: right;
+    color: #cccccc;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu-element + .menu-element{
+    margin-left: 20px;
+}
+
+@media (max-width: 416px) {
+    .footer{
+        top: 6830px;
+        height: 945px;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .footer-title{
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: 40px;
+        align-items: normal;
+    }
+
+    .text-1, .text-2{
+        width: 100%;
+        margin: 0 30px;
+    }
+
+    .content{
+        width: 330px;
+    }
+
+    .text-2{
+        margin-top: 20px;
+    }
+
+    .social{
+        margin-left: 15px;
+    }
+
+    .size-img{
+        width: 101px;
+        height: 101px;
+    }
+    
+    .trip-img{
+        height: 227px;
+    }
+
+    .trip-img-top, .trip-img-bottom{
+        width: 85%;
+        height: 76px;
+    }
+
+    .footer-title-content{
+        width: 312px;
+        font-size: 14px;
+    }
+    .menu-element{
+        font-size: 14px;
+    }
+
+    .title-1{
+        margin-left: 30px;
+    }
+}
+
+@media ((min-width: 819px) and (max-width: 900px)){
+    .footer{
+        top: 3330px;
+        height: 480px;
+    }
+
+    .footer-title{
+        padding: 30px 20px 20px 20px;
+        margin-top: 90px;
+    }
+
+    .size-img{
+        width: 76.75px;
+        height: 76.75px;
+    }
+
+    .trip-img{
+        height: 180px;
+        width: 388px;
+        justify-content: flex-start;
+    }
+
+    .trip-img-top, .trip-img-bottom{
+        width: 65%;
+        height: 76px;
+    }
+
+    .social{
+        width: 220px;
+    }
+
+    .image{
+        width: 226px;
+        height: 103px;
+    }
+
+    .text-1{
+        margin-left: 55px;
+    }
+
+    .container{
+        margin-left: 45px;
+    }
+}

@@ -3,7 +3,7 @@
     top: 150px;
     right: -2px;
     cursor: pointer;
-    z-index: 9;
+    z-index: 9999;
     background: #fff;
     border-right: 0;
     width: 40px;
@@ -32,8 +32,21 @@
     font-size: 15px;
     line-height: 30px;
     color: #222;
+    cursor: pointer;
 }
 
 .custom-tippy{
-    font-size: 10px;
+    font-size: 10px !important;
+}
+
+@media (max-width: 415px){
+    .option-menu{
+        right: 75px;
+    }
+}
+
+@media ((min-width: 819px) and (max-width: 900px)){
+    .option-menu{
+        right: 111px;
+    }
 }

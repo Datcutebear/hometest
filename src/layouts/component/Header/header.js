@@ -3,7 +3,7 @@ import styles from './header.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCartShopping, faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import MenuItems from "~/components/Popper/MenuItems";
-import OptionBtn from "~/components/OptionBtn";
+import { useState, useEffect } from "react";
 
 
 const cx = classNames.bind(styles)
@@ -467,13 +467,62 @@ const MENU = [
     }
 
 ]
+
 function Header() {
+    const [prevScrollY, setPrevScrollY] = useState(0);
+    const [visible, setVisible] = useState(true);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        const isScrolled = currentScrollY > 100;
+        const isScrollingUp = currentScrollY < prevScrollY;
+
+        setPrevScrollY(currentScrollY);
+
+        if (isScrolled) {
+            if (isScrollingUp) {
+                setVisible(true);
+            } else {
+                setVisible(false);
+            }
+        } else {
+            setVisible(true);
+        }
+
+        setScrolled(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollY]);
+
+    const headerClassName = cx({
+        wrapper: true,
+        'wrapper--hidden': !visible,
+        'wrapper--transparent': !scrolled,
+        'wrapper--scrolled': scrolled,
+    });
+
+    const iconChange = cx({
+        'icon--transparent': !scrolled,
+    })
+    
+    const logoImageSrc = scrolled
+    ? "https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/themes/grandtour/images/logo@2x.png"
+    : "https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/themes/grandtour/images/logo@2x_white.png";
+
+
     return ( 
-        <div className={cx('wrapper')}>
+        <div className={headerClassName}>
             <div className={cx('standard-wrapper')}>
                 <div className={cx('logo')}>
                     <div className={cx('logo-image')}>
-                        <img src="https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/themes/grandtour/images/logo@2x.png" 
+                        <img src={logoImageSrc} 
                             alt="" 
                             width="92" 
                             height="22" 
@@ -482,18 +531,19 @@ function Header() {
                     </div>
 
                     <div className={cx('menu-list')}>
-                        <MenuItems items = {MENU} />
-                        <FontAwesomeIcon className={cx('mobile-icon')} icon={faBars} />
-                        <div className={cx('shopping-cart')}>
-                            <FontAwesomeIcon className={cx('shopping-icon')} icon={faCartShopping} />
-                            <div className={cx('shopping-count')}>
-                                0
+                        <div className={cx('menu-list-element')}>
+                            <MenuItems items = {MENU} isHeaderWhite={!scrolled} />
+                        </div>
+                        <div className={cx('menu-list-icon')}>
+                            <FontAwesomeIcon className={cx('mobile-icon', {iconChange})} icon={faBars} />
+                            <div className={cx('shopping-cart', {iconChange})}>
+                                <FontAwesomeIcon className={cx('shopping-icon', {iconChange})} icon={faCartShopping} />
+                                <div className={cx('shopping-count')}>
+                                    0
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <OptionBtn />
-
                 </div>
             </div>
         </div>

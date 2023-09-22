@@ -1,0 +1,133 @@
+.element{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(28.33% - 23px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.element + .element{
+    margin-left: 30px;
+}
+
+
+.article-image{
+    position: relative;
+}
+
+.element-img{
+    width: 393px;
+    height: 262px;
+}
+
+.article-info{
+    margin-top: 270px;
+    padding: 5px 15px 15px 15px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.article-day{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.city-name{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 12px;
+    line-height: 30px;
+}
+
+.article-content{
+    color: #333;
+    font-size: 16px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+}
+
+.read-more{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #909090;
+
+    &:hover{
+        color: #333;
+    }
+}
+
+
+.more-icon{
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+@media (max-width: 415px){
+    .element-img{
+        width: 371px;
+        height: 230px;
+    }
+    .element{
+        width: calc(95.33% - 22px);
+        height: 535px;
+        margin-bottom: 0;
+        border-radius: 8px;
+    }
+
+    .element + .element{
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .article-info{
+        margin-top: 239px;
+        padding: 5px 15px 15px 20px;
+    }
+
+    .read-more{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 376px){
+    .element-img{
+        width: 335px;
+        height: 220px;
+    }
+}
+
+@media ((min-width: 819px) and (max-width: 900px)){
+    .element-img{
+        width: 239px;
+        height: 158px;
+    }
+
+    .element{
+        width: calc(32.33% - 25px);
+        height: 480px;
+    }
+
+    .article-info{
+        margin-top: 160px;
+        padding: 5px 23px 15px 23px;
+    }
+
+    .city-name{
+        font-size: 18px;
+    }
+}

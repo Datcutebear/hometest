@@ -1,0 +1,45 @@
+.input-group{
+    border: 1px solid #dce0e0;
+    border-radius: 5px;
+    background: #fff;
+    width: 283px;
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.input{
+    width: calc(100% - 30px);
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 10px;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-left: 14px;
+    padding-top: 11px;
+}
+
+.icon{
+    position: absolute;
+    right: 9px;
+    top: 11px;
+    color: #a2a2a2;
+}
+
+@media (max-width: 415px) {
+    .input-group{
+        margin-right: 0px;
+        margin-bottom: 7px;
+        width: 295px;
+    }
+}
+
+@media ((min-width: 819px) and (max-width: 900px)){
+    .input-group{
+        width: 170px;
+    }
+}

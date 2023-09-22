@@ -1,0 +1,43 @@
+.to-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer;
+    transition: color 300ms,background-color 300ms,opacity 300ms;
+    z-index: 9;
+    border-radius: 25px;
+    background-color: #1EC6B6;
+    color: #fff;
+    opacity: 1;
+    visibility: visible;
+}
+
+.to-top.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.up-icon{
+    font-size: 13px;
+    line-height: 24px;
+}
+
+@media (max-width: 416px){
+    .to-top{
+        right: 85px;
+    }
+}
+
+@media ((min-width: 819px) and (max-width: 900px)){
+    .to-top{
+        right: 120px;
+    }
+}
